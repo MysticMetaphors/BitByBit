@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .input {
+       border: 0.5px solid rgb(62, 62, 62);
+       padding: 8px 15px;
+       background-color: #1a1a1a;
+       border-radius: 4px;
+       color: white;
+    }
+
+    body {
+        color: white;
+    }
+}
