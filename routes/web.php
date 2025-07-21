@@ -11,9 +11,15 @@ Route::get('/', function () {
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
-        'images' => asset('storage/7481714.jpg')
+        'images' => asset('storage/7481714.jpg'),
+        'bg' => asset('storage/Pixel Art background Violet theme nature.jpg')
     ]);
-});
+})->name('home');
+
+Route::get('/gallery', function () {
+    return Inertia::render('Gallery');
+})->name('gallery');
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

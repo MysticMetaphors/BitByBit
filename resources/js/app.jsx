@@ -1,25 +1,33 @@
-import '../css/app.css';
-import './bootstrap';
-
 import { createInertiaApp } from '@inertiajs/react';
-import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createRoot } from 'react-dom/client';
-
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+import '../css/app.css'
+import MainLayout from './Layouts/MainLayout';
 
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
-    resolve: (name) =>
-        resolvePageComponent(
-            `./Pages/${name}.jsx`,
-            import.meta.glob('./Pages/**/*.jsx'),
-        ),
-    setup({ el, App, props }) {
-        const root = createRoot(el);
-
-        root.render(<App {...props} />);
+    resolve: name => {
+        const pages = import.meta.glob('./Pages/**/*.jsx', { eager: true });
+        let page = pages[`./Pages/${name}.jsx`].default;
+        page.layout ??= (page) => <MainLayout>{page}</MainLayout>;
+        return page;
     },
-    progress: {
-        color: '#4B5563',
+    setup({ el, App, props }) {
+        const { ziggy } = props.initialPage.props;
+        const Ziggy = { ...ziggy, location: window.location.href };
+
+        createRoot(el).render(
+
+            <App
+                {...props}
+                initialPage={{
+                    ...props.initialPage,
+                    props: {
+                        ...props.initialPage.props,
+                        Ziggy,
+                    },
+                }}
+            />
+        );
+
+        window.Ziggy = Ziggy;
     },
 });

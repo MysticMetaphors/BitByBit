@@ -16,6 +16,10 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             colors: {
+                transparent: {
+                    200: '#181818dc',
+                    100: '#00000001'
+                },
                 black: {
                     900: '#000000',
                     800: '#1a1a1a',
@@ -39,8 +43,17 @@ export default {
                     50: '#f5f3ff',
                 },
             },
+            keyframes: {
+                float: {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' },
+                },
+            },
+            animation: {
+                float: 'float 3s ease-in-out infinite',
+            },
         },
     },
 
-        plugins: [forms],
-    };
+    plugins: [forms],
+};
