@@ -29,6 +29,13 @@ Route::get('/about', function () {
     return Inertia::render('About');
 })->name('about');
 
+Route::get('/fonts', function () {
+    return Inertia::render('Fonts');
+})->name('fonts');
+
+Route::get('/ai', function () {
+    return Inertia::render('AI');
+})->name('ai');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

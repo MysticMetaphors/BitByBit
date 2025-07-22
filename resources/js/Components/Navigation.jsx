@@ -91,10 +91,10 @@ export default function Navigation() {
                                 <Link href={route('creators')} className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white md:dark:bg-transparent" aria-current="page">Creators</Link>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white md:dark:bg-transparent" aria-current="page">AI Models</a>
+                                <Link href={route('ai')} className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white md:dark:bg-transparent" aria-current="page">AI Models</Link>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white md:dark:bg-transparent" aria-current="page">Fonts</a>
+                                <Link href={route('fonts')} className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white md:dark:bg-transparent" aria-current="page">Fonts</Link>
                             </li>
                             <li>
                                 <Link href={route('about')} className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white md:dark:bg-transparent" aria-current="page">About</Link>
