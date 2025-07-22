@@ -37,6 +37,10 @@ Route::get('/ai', function () {
     return Inertia::render('AI');
 })->name('ai');
 
+Route::get('/works', function () {
+    return Inertia::render('CreatorsWorks');
+})->name('works');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
