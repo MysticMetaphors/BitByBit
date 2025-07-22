@@ -1,4 +1,4 @@
-import { Head, router } from '@inertiajs/react';
+import { Head, router, Link } from '@inertiajs/react';
 import { route } from 'ziggy-js';
 
 export default function Welcome() {
@@ -9,7 +9,7 @@ export default function Welcome() {
 
     return (
         <>
-            <Head title='Welcome' />
+            <Head title='PixelForge' />
             <div
                 className="h-96 bg-cover bg-center"
                 style={{
@@ -22,7 +22,9 @@ export default function Welcome() {
                 <div className="flex flex-col justify-center items-center h-full pt-[100px]">
                     <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
                         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"> Helping creators craft their worlds</h1>
-                        <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-200">At PixelForge we offer free pixel art assets and AI models, helping developers, artists, and hobbyists craft immersive games and unlock their creative potential.</p>
+                        <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-200">
+                            At PixelForge we showcase free pixel art assets and AI models shared by their rightful creators, helping developers, artists, and hobbyists craft immersive games and unlock their creative potential.
+                        </p>
 
                         {/* <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                             <form className="max-w-[400px] mx-auto">
@@ -36,6 +38,18 @@ export default function Welcome() {
                                 </div>
                             </form>
                         </div> */}
+                        <div className="flex justify-center mt-4">
+                            <Link
+                                href={route('gallery')}
+                                className="bg-violet-900 py-[8px] px-[15px] text-white flex gap-[5px] w-fit items-center"
+                            >
+                                About Us
+                                <span className="material-symbols-rounded text-[18px]">
+                                    arrow_forward
+                                </span>
+                            </Link>
+                        </div>
+
 
                     </div>
                 </div>

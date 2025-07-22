@@ -35,7 +35,7 @@ export default function Navigation() {
                             </li>
                             <li className="relative">
                                 <button
-                                    className="flex items-center justify-between w-full py-2 px-3 text-gray-900 md:border-0 md:p-0 md:w-auto dark:text-white"
+                                    className="flex gap-[4px] items-center justify-between w-full py-2 px-3 text-gray-900 md:border-0 md:p-0 md:w-auto dark:text-white"
                                 >
                                     <Link href={route('gallery')}>Gallery</Link>
                                     <span class="material-symbols-rounded"
@@ -88,7 +88,7 @@ export default function Navigation() {
                                 </div>
                             </li>
                             <li>
-                                <a href="#" className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white md:dark:bg-transparent" aria-current="page">Creators</a>
+                                <Link href={route('creators')} className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white md:dark:bg-transparent" aria-current="page">Creators</Link>
                             </li>
                             <li>
                                 <a href="#" className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white md:dark:bg-transparent" aria-current="page">AI Models</a>

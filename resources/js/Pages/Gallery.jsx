@@ -14,16 +14,26 @@ export default function Gallery() {
                         <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-200"> At PixelForge we connect you with free pixel art assets and AI models created by talented artists and shared for everyone, so you can find what you need to craft your games.</p>
 
                         <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                            <form className="max-w-[400px] mx-auto">
+                            <form className="max-w-[400px] mx-auto flex flex-row gap-[8px]">
                                 <div className="relative">
                                     <div className="absolute inset-y-0 start-0 flex items-center ps-[10px] pointer-events-none">
-                                        <span class="material-symbols-rounded text-gray-500">
+                                        <span className="material-symbols-rounded text-gray-500">
                                             search
                                         </span>
                                     </div>
                                     <input type="text" id="email-address-icon" className="bg-black-700 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." />
                                 </div>
+
+                                <select name="" id="" className="bg-black-700 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block pr-[30px] p-2.5  dark:border-gray-600 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option hidden selected value="">Category</option>
+                                    <option value="">All</option>
+                                    <option value="">Sprite</option>
+                                    <option value="">Tilesets</option>
+                                    <option value="">Backgrounds</option>
+                                </select>
                             </form>
+
+
                         </div>
 
                     </div>
